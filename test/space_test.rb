@@ -14,6 +14,6 @@ class SpaceTest < Minitest::Test
     assert_equal ({}), @space.coordinates
   end
 
-  
+
 
 end

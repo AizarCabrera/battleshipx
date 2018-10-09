@@ -1,8 +1,19 @@
 require './test/test_helper'
 
 class SpaceTest < Minitest::Test
-  def test_it_exists
-  space = Space.new
-  assert_instance_of Space, space
+  def setup
+    @space = Space.new
   end
+
+  def test_it_exists
+    assert_instance_of Space, @space
+  end
+
+  def test_it_can_have_an_empty_hash
+    assert_instance_of Hash, @space.coordinates
+    assert_equal ({}), @space.coordinates
+  end
+
+  
+
 end

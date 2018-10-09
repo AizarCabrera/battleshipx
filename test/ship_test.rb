@@ -1,8 +1,41 @@
-require './test/helper'
+require './test/test_helper'
 
 class ShipTest < Minitest::Test
-  def test_it_exists
-  ship = Ship.new
-  assert_instance_of Ship, ship
+
+  def setup
+    @ship = Ship.new(2)
   end
+
+  def test_it_exists
+  assert_instance_of Ship, @ship
+  end
+
+  def test_it_has_health
+    assert_equal 2, @ship.health
+  end
+
+  def test_it_has_length
+    assert_equal 2, @ship.length
+  end
+
+  def test_if_damage_works
+    assert_equal 1, @ship.damage
+  end
+
+  def test_it_can_be_damaged
+    @ship.damage
+    assert_equal 1, @ship.health
+  end
+
+  def test_it_can_float
+    @ship.damage
+    assert_equal "afloat", @ship.status
+  end
+
+  def test_it_can_be_sunk
+    @ship.damage
+    @ship.damage
+    assert_equal "sunk", @ship.status
+  end
+
 end

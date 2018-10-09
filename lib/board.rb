@@ -1,5 +1,6 @@
 class Board
 
+
   def y_coord
     y_coord = [@row_1] #@row_2, @row_3]
   end
@@ -10,28 +11,6 @@ class Board
     }
   end
 
-  # def row_1
-  # @row_1 = { #  x coordinates
-  #   1 => "x",
-  #   2 => "x",
-  #   3 => "x"
-  # }
-
-  # def row_2
-  #   @row_2 = {
-  #     1 => "x",
-  #     2 => "x",
-  #     3 => "x"
-  #   }
-  # end
-
-  # def row_3
-  #   @row_3 = {
-  #     1 => "x",
-  #     2 => "x",
-  #     3 => "x"
-  #   }
-  # end
 end
 
 

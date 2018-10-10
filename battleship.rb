@@ -19,7 +19,7 @@ class Battleship
   def start
     puts "Welcome to BATTLESHIP"
     puts "Would you like to (p)lay, read the (i)nstructions, or (q)uit?"
-    puts ">"
+    print ">"
     input = gets.chomp
     if input == 'p' || input =='play'
       play

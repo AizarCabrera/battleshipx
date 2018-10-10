@@ -5,7 +5,11 @@ class Board # still needs an initialize
   end
 
   def coord(x, y)
-    coord[y-1] = [@row_1[x], @row_2[x], @row_3[x], @row_4[x]] # y - 1 translates it into an index value 
+    coord[y-1] = [@row_1[x], @row_2[x], @row_3[x], @row_4[x]] # y - 1 translates it into an index value
+  end
+
+  def coord(x, y)
+    coord[y-1] = [@row_1[x], @row_2[x], @row_3[x], @row_4[x]] # y - 1 translates it into an index value
   end
 
   def y_coord
@@ -13,6 +17,7 @@ class Board # still needs an initialize
     # row_2 = {1:"x", 2:"x", 3:"x"}
     # row_3 = {1:"x", 2:"x", 3:"x"}
   end
+
 
 
     def row_1
@@ -56,3 +61,7 @@ class Board # still needs an initialize
     #
     # end
 end
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5f24cbed19b223945c72967ad125e3fc909f8149

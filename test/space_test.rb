@@ -10,8 +10,8 @@ class SpaceTest < Minitest::Test
   end
 
   def test_it_can_have_an_empty_hash
-    assert_instance_of Hash, @space.coordinates
-    assert_equal ({}), @space.coordinates
+    assert_instance_of Array, @space.coordinates
+    assert_equal [], @space.coordinates
   end
 
 

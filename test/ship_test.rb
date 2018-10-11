@@ -18,10 +18,6 @@ class ShipTest < Minitest::Test
     assert_equal 2, @ship.length
   end
 
-  def test_if_damage_works
-    assert_equal 1, @ship.damage
-  end
-
   def test_it_can_be_damaged
     @ship.damage
     assert_equal 1, @ship.health

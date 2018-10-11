@@ -1,16 +1,19 @@
-require './place_ship'
-require './ship'
-require './board'
+require './lib/place_ship'
+require './lib/ship'
+require './lib/board'
 
 class Cell
   attr_reader :x, :y, :ship, :status
-  def initialize(x, y, ship = false, status = 0) #status 0 is neutral, 1 is miss, 2 is hit
+  def initialize(x, y, status = 0) #status 0 is neutral, 1 is miss, 2 is hit
     @x = x
     @y = y
-    @ship = ship
+    @ship = nil
     @status = status
   end
 
+  def has_ship
+    @ship = true
+  end
 
 end
 

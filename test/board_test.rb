@@ -19,8 +19,7 @@ class BoardTest < Minitest::Test
   end
 
   def test_it_can_have_a_row
-    @board = Board.new
-    assert_equal 5, board.row_1
+    assert_equal ({1=>[], 2=>[], 3=>[], 4=>[]}), @board.row_1
   end
 
 end

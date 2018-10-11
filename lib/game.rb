@@ -2,9 +2,24 @@ require 'pry'
 
 class Game
 
-# When we call this class, we should populate it with a board or display
-# Following the proper constrictions we are supposed to follow
 
 
-# We print the board...to the user
+
+    def enter_coordinates
+      puts 'Enter the squares for the two-unit ship:'
+      input = gets.chomp
+      @board.validate_coordinates
+      # if coordinates are valid, the user is prompt to take a shot
+      shot
+    end
+
+    def shot
+      input = gets.chomp
+      # the user takes a shot
+      print board
+    end
+
+  
+
+
 end

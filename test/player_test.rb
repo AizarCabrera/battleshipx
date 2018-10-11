@@ -12,5 +12,9 @@ class PlayerTest < Minitest::Test
     assert_instance_of Player, @player_2
   end
 
+  def test_it_can_be_a_type_of_player
+    assert_equal 'computer', @player_1.type
+  end
+
 
 end

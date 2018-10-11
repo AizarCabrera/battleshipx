@@ -2,8 +2,10 @@ require 'pry'
 
 class Player
 
-  def initialize(player_type)
+  attr_reader :type
 
+  def initialize(player_type)
+    @type = player_type
   end
 
 end

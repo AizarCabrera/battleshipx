@@ -34,8 +34,8 @@ class Battleship
   end
 
   def play
-    # player_1 = Player.new('computer')
-    # player_2 = Player.new('human')
+    player_1 = Player.new('computer')
+    player_2 = Player.new('human')
     # Computer places the ships randomly
     Game.new(player_1, player_2)
     puts 'I have laid out my ships on the grid. You now need to layout your two ships.'

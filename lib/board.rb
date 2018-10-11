@@ -26,9 +26,8 @@ class Board # still needs an initialize
           3 => [ ],
           4 => [ ]
         }
-    end
-
   end
+
 
   def coord(x, y)
     coord[y-1] = [@row_1[x], @row_2[x], @row_3[x], @row_4[x]] # y - 1 translates it into an index value

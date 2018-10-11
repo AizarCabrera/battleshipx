@@ -1,5 +1,5 @@
 
-class Place_ship
+class PlaceShip
   attr_reader :ship_length, :ship_coord
   def initialize(length)
     @length = length

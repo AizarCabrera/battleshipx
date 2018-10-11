@@ -23,7 +23,7 @@ class CellTest < Minitest::Test
   end
 
   def test_it_can_have_ship
-    cell = Cell.new(5, 4, true)
+    cell = Cell.new(5, 4, true) # instead you can add a ship (no true) as method
 
     assert_equal true, cell.ship
   end

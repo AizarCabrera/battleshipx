@@ -25,5 +25,5 @@ computer_submarine = Ship.new(3)
 c_destroyer_place = PlaceShip.new(computer_destroyer.health)
 c_submarine_place = PlaceShip.new(computer_submarine.health)
 
-p c_destroyer_place
-p c_submarine_place
+ c_destroyer_place
+ c_submarine_place

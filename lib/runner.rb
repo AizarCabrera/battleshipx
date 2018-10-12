@@ -9,12 +9,12 @@ require './board'
 # p ship2
 
 
-### SHOWS THAT NEW SHIPS CAN BE PLACED. 
+### SHOWS THAT NEW SHIPS CAN BE PLACED.
 computer_destroyer = Ship.new(2)
 computer_submarine = Ship.new(3)
 
-c_destroyer_place = PlaceShip.new(computer_destroyer.health)
-c_submarine_place = PlaceShip.new(computer_submarine.health)
+# c_destroyer_place = PlaceShip.new(computer_destroyer.health)
+# c_submarine_place = PlaceShip.new(computer_submarine.health)
 
 p c_destroyer_place
 p c_submarine_place

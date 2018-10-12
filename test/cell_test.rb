@@ -10,13 +10,11 @@ class CellTest < Minitest::Test
   def test_it_exists
     assert_instance_of Cell, @cell
   end
-  #
-  # def test_it_can_take_coordinates
-  #   cell = Cell.new(5, 4)
-  #
-  #   assert_equal 5, cell.x
-  #   assert_equal 4, cell.y
-  # end
+
+  def test_it_can_take_coordinates
+    assert_equal 5, @cell.coord_x
+    assert_equal 4, @cell.coord_y
+  end
   #
   # def test_it_does_not_have_ship
   #   cell = Cell.new(5, 4)

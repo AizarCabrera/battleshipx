@@ -4,7 +4,9 @@ require './lib/cell'
 
 class CellTest < Minitest::Test
   def setup
-    @cell = Cell.new(5, 4, 0)
+    @cell   = Cell.new(1, 1, 0)
+    @cell_1 = Cell.new(2, 1, 1)
+    @cell_2 = Cell.new(3, 1, 2)
   end
 
   def test_it_exists
@@ -12,11 +14,11 @@ class CellTest < Minitest::Test
   end
 
   def test_it_can_take_horizontal_coordinates
-    assert_equal 5, @cell.coord_x
+    assert_equal 1, @cell.coord_x
   end
 
   def test_it_can_take_vertical_coordinates
-    assert_equal 4, @cell.coord_y
+    assert_equal 1, @cell.coord_y
   end
 
   def test_it_does_not_have_ship_by_default
@@ -32,13 +34,11 @@ class CellTest < Minitest::Test
   end
 
   def test_status_can_have_a_miss
-    assert_equal 1, @cell.status
+    assert_equal 1, @cell_1.status
   end
-  #
-  # def test_its_hit
-  #   cell = Cell.new(5, 4, true, 2)
-  #
-  #   assert_equal 2, cell.status
-  # end
+
+  def test_status_can_have_a_hit
+    assert_equal 2, @cell_2.status
+  end
 
 end

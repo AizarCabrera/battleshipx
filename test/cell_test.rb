@@ -11,8 +11,11 @@ class CellTest < Minitest::Test
     assert_instance_of Cell, @cell
   end
 
-  def test_it_can_take_coordinates
+  def test_it_can_take_horizontal_coordinates
     assert_equal 5, @cell.coord_x
+  end
+
+  def test_it_can_take_vertical_coordinates
     assert_equal 4, @cell.coord_y
   end
   #

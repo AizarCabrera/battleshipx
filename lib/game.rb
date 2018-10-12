@@ -29,11 +29,13 @@ class Game
     puts 'Enter the squares for the two-unit ship:'
     input = gets.chomp
     # @board.validate_coordinates
+    # if coordinates are valid, the user is prompt to enter coordinates for a three unit ship
     # if coordinates are valid, the user is prompt to take a shot
     shot
   end
 
   def self.shot
+
     input = gets.chomp
     # the user takes a shot
     print board

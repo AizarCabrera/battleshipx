@@ -1,6 +1,4 @@
-require 'minitest/autorun'
-require 'minitest/pride'
-require './lib/cell'
+require './test/test_helper'
 
 class CellTest < Minitest::Test
   def setup

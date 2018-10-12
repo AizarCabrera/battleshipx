@@ -1,5 +1,4 @@
 require './lib/place_ship'
-require './lib/ship'
 
 class Cell
   attr_reader :coord_x,

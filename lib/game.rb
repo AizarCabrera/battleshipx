@@ -8,13 +8,22 @@ class Game
   def self.begin
   # player_1 = Player.new('computer')
   # player_2 = Player.new('human')
-  # # Computer places the ships randomly
+  # Computer places the ships randomly
+  display
   puts 'I have laid out my ships on the grid. You now need to layout your two ships.'
   puts 'The first is two units long and the second is three units long.'
   puts 'The grid has A1 at the top left and D4 at the bottom right.'
   enter_coordinates
   end
 
+  def self.display
+  board = Board.new
+  p board.row_1.values
+  p board.row_2.values
+  p board.row_3.values
+  p board.row_4.values
+  p board.row_5.values
+  end
 
   def self.enter_coordinates
     puts 'Enter the squares for the two-unit ship:'
@@ -29,8 +38,5 @@ class Game
     # the user takes a shot
     print board
   end
-
-
-
 
 end

@@ -23,7 +23,7 @@ p c_submarine_place
 
 board = Board.new
 
-p board.row_4.values
+p board.row_4.values.
 p board.row_3.values
 p board.row_2.values
 p board.row_1.values

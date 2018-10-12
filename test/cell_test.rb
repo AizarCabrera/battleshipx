@@ -4,7 +4,7 @@ require './lib/cell'
 
 class CellTest < Minitest::Test
   def setup
-    @cell = Cell.new(5, 4)
+    @cell = Cell.new(5, 4, 0)
   end
 
   def test_it_exists
@@ -23,23 +23,17 @@ class CellTest < Minitest::Test
     assert_nil nil, @cell.ship
   end
 
-  # def test_it_can_have_ship
-  #   cell = Cell.new(5, 4, true) # instead you can add a ship (no true) as method
-  #
-  #   assert_equal true, cell.ship
-  # end
-  #
-  # def test_its_neutral
-  #   cell = Cell.new(5, 4, true)
-  #
-  #   assert_equal 0, cell.status
-  # end
-  #
-  # def test_its_a_miss
-  #   cell = Cell.new(5, 4, true, 1)
-  #
-  #   assert_equal 1, cell.status
-  # end
+  def test_it_can_have_a_ship
+    assert_equal true, @cell.has_ship
+  end
+
+  def test_status_its_neutral_by_default
+    assert_equal 0, @cell.status
+  end
+
+  def test_status_can_have_a_miss
+    assert_equal 1, @cell.status
+  end
   #
   # def test_its_hit
   #   cell = Cell.new(5, 4, true, 2)

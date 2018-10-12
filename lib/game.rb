@@ -31,7 +31,6 @@ class Game
   end
 
   def self.shot
-
     input = gets.chomp
     # the user takes a shot
     print board

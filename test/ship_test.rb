@@ -25,13 +25,13 @@ class ShipTest < Minitest::Test
 
   def test_it_can_float
     @ship.damage
-    assert_equal "afloat", @ship.status
+    assert_equal "afloat", @ship.ship_status
   end
 
   def test_it_can_be_sunk
     @ship.damage
     @ship.damage
-    assert_equal "sunk", @ship.status
+    assert_equal "sunk", @ship.ship_status
   end
 
 end

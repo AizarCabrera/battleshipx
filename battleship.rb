@@ -1,10 +1,6 @@
-require './lib/board'
-require './lib/ship'
 require './lib/game'
 require './lib/player'
-require './lib/space'
 require 'pry'
-
 
 class Battleship
 
@@ -34,16 +30,8 @@ class Battleship
   end
 
   def play
-    player_1 = Player.new('computer')
-    player_2 = Player.new('human')
-    # Computer places the ships randomly
-    Game.new(player_1, player_2)
-    puts 'I have laid out my ships on the grid. You now need to layout your two ships.'
-    puts 'The first is two units long and the second is three units long.'
-    puts 'The grid has A1 at the top left and D4 at the bottom right.'
-
+    Game.begin
   end
-
 
 end
 Battleship.new

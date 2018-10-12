@@ -16,5 +16,8 @@ class PlayerTest < Minitest::Test
     assert_equal 'computer', @player_1.type
   end
 
+  def test_it_can_be_a_different_type_of_player
+    assert_equal 'human', @player_2.type
+  end
 
 end

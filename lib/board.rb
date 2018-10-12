@@ -8,35 +8,40 @@ class Board # still needs an initialize
 
   def initialize
       @row_1 = { #  x coordinates
-          1 => ["1"],
-          2 => ["2"],
-          3 => ["3"],
-          4 => ["4"]
+          1 => ["0"],
+          2 => ["1"],
+          3 => ["2"],
+          4 => ["3"],
+          5 => ["4"]
         }
         @row_2 = {
           1 => ["A"],
           2 => [   ],
           3 => [   ],
-          4 => [   ]
+          4 => [   ],
+          5 => [   ]
         }
         @row_3 = {
           1 => ["B"],
           2 => [   ],
           3 => [   ],
-          4 => [   ]
+          4 => [   ],
+          5 => [   ]
         }
         @row_4 = {
           1 => ["C"],
           2 => [   ],
           3 => [   ],
-          4 => [   ]
+          4 => [   ],
+          5 => [   ]
         }
 
         @row_5 = {
           1 => ["D"],
           2 => [   ],
           3 => [   ],
-          4 => [   ]
+          4 => [   ],
+          5 => [   ]
         }
   end
 
@@ -53,7 +58,10 @@ class Board # still needs an initialize
   end
 
   def display_board ## ASK ABOUT HOW TO MAKE A METHOD PRINT THEM ALL OUT
-    display_hashes = [row_1.values, row_2.values, row_3.values, row_4.values]
-    p display_hashes
+    p board.row_1.values
+    p board.row_2.values
+    p board.row_3.values
+    p board.row_4.values
+    p board.row_5.values
   end
 end

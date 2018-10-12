@@ -18,13 +18,11 @@ class CellTest < Minitest::Test
   def test_it_can_take_vertical_coordinates
     assert_equal 4, @cell.coord_y
   end
-  #
-  # def test_it_does_not_have_ship
-  #   cell = Cell.new(5, 4)
-  #
-  #   assert_equal false, cell.ship
-  # end
-  #
+
+  def test_it_does_not_have_ship_by_default
+    assert_nil nil, @cell.ship
+  end
+
   # def test_it_can_have_ship
   #   cell = Cell.new(5, 4, true) # instead you can add a ship (no true) as method
   #

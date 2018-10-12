@@ -6,8 +6,8 @@ class Cell
   def initialize(coord_x, coord_y, status = 0) #status 0 is neutral, 1 is miss, 2 is hit
     @coord_x = coord_x
     @coord_y = coord_y
-    @ship = nil
-    @status = status
+    @ship    = nil
+    @status  = status
   end
 
   def has_ship

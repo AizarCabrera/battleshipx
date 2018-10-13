@@ -1,5 +1,4 @@
 require './lib/ship'
-require './lib/board'
 
 class Cell
   attr_reader :x, :y, :ship, :status, :x_y
@@ -9,6 +8,19 @@ class Cell
     @ship = nil
     @status = status
     @x_y = @x.to_s + @y.to_s
+  end
+
+  def display
+    if @status == 0
+      space = ' '
+      space
+    elsif @status == 1
+      space = 'M'
+      space
+    elsif @status == 2
+      space = 'H'
+      space
+    end
   end
 
   def has_ship

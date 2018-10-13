@@ -15,7 +15,7 @@ class Ship
     @length -=1
   end
 
-  def status
+  def ship_status
     if health == 0
       "sunk"
     else

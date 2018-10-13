@@ -9,11 +9,7 @@ class SpaceTest < Minitest::Test
     assert_instance_of Space, @space
   end
 
-  def test_it_can_have_an_empty_hash
-    assert_instance_of Array, @space.coordinates
-    assert_equal [], @space.coordinates
+  def test_it_can_place_a_single_cell_ship
+    assert_equal true, @space.place_user_ships('A1')['A1'].ship
   end
-
-
-
 end

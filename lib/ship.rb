@@ -1,5 +1,3 @@
-require 'pry'
-
 class Ship
   attr_reader :length
 
@@ -12,14 +10,14 @@ class Ship
   end
 
   def damage
-    @length -=1
+    @length -= 1
   end
 
   def ship_status
     if health == 0
-      "sunk"
+      'sunk'
     else
-      "afloat"
+      'afloat'
     end
   end
 end

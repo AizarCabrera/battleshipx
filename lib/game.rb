@@ -4,7 +4,6 @@ require './lib/space'
 require 'pry'
 
 class Game
-
   def self.begin
     @board    = Board.new
     @computer = Player.new('computer')
@@ -24,6 +23,9 @@ class Game
   def self.enter_coordinates
     puts 'Enter the squares for the two-unit ship:'
     input = gets.chomp
+    guess = Space.new
+    guess.place_user_ships(input.upcase)
+
     # @board.validate_coordinates
     # if coordinates are valid, the user is prompt to enter coordinates for a three unit ship
     # if coordinates are valid, the user is prompt to take a shot
@@ -35,5 +37,4 @@ class Game
     # the user takes a shot
     print board
   end
-
 end

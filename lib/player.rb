@@ -7,12 +7,12 @@ class Player
     @type = player_type
   end
 
-  # method random, will communicate with player through game
-  def place_random
-    # comp_destroyer
-  end
+  # # method random, will communicate with player through game
+  # def place_random
+  #   # comp_destroyer
+  # end
 
-  def comp_destroyer # RANDOMLY GENERATES SHIP COORDINATES
+  def place_destroyer # RANDOMLY GENERATES SHIP COORDINATES
     if @length == 2
       orientation = ["vertical", "horizontal"].shuffle.pop
       if orientation == "vertical" # CAN ONLY GO DOWN
@@ -26,7 +26,6 @@ class Player
         x_place_a = [1, 2].shuffle.pop
         x_place_b = x_place_a + 1
         @ship_coord= [[x_place_a, y_place], [x_place_b, y_place]]
-        # binding.pry
       end
     end
   end

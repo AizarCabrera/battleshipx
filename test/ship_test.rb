@@ -34,4 +34,13 @@ class ShipTest < Minitest::Test
     assert_equal "sunk", @ship.ship_status
   end
 
+  def test_it_can_place_a_destroyer_randomly
+    skip
+    refute [[1, 4], [1, 3]] , @ship.place_destroyer
+  end
+
+  def test_it_can_place_a_submarine_randomly
+    assert_equal 3 , @ship.place_submarine
+  end
+
 end

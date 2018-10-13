@@ -1,28 +1,21 @@
-require './lib/place_ship'
+require './lib/ship'
+require './lib/board'
 
 class Cell
-  attr_reader :coord_x,
-              :coord_y,
-              :ship,
-              :status
-
-  def initialize(coord_x, coord_y, status = 0) #status 0 is neutral, 1 is miss, 2 is hit
-    @coord_x = coord_x
-    @coord_y = coord_y
-    @ship    = nil
-    @status  = status
+  attr_reader :x, :y, :ship, :status, :x_y
+  def initialize(x, y, status = 0) # status 0 is neutral, 1 is miss, 2 is hit
+    @x = x
+    @y = y
+    @ship = nil
+    @status = status
+    @x_y = @x.to_s + @y.to_s
   end
 
   def has_ship
     @ship = true
   end
-
 end
 
-# have it's own method to genenerate ship and populate it
-# computer_destroyer = Ship.new(2)
-# computer_submarine = Ship.new(3)
-#
-
-# c_destroyer_place = PlaceShip.new(computer_destroyer.health)
-# c_submarine_place = PlaceShip.new(computer_submarine.health)
+# A1 = Cell.new("A", "1")
+# A1.has_ship
+# p A1.x

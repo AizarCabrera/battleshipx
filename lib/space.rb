@@ -2,12 +2,13 @@ require 'pry'
 require './lib/cell'
 
 class Space
-attr_reader :valid_guesses, :guessed, :guess
+attr_reader :valid_guesses,
+            :guessed,
+            :guess
 
-  def initialize(guess)
-    @guess = guess.upcase
+  def initialize
+    @guess   = guess
     @guessed = []
-    find_empty_spots
   end
 
   def find_empty_spots

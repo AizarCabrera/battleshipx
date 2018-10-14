@@ -10,8 +10,21 @@ class Cell
     @x_y = @x.to_s + @y.to_s
   end
 
+  def check
+    if @ship.nil?
+      @status += 1
+      @display = ['M']
+    elsif @ship == true
+      @status += 2
+      @display = ['H']
+    end
+  end
+
   def display
-    if @status == 0
+    if @ship == true
+      space = 's'
+      space
+    elsif @status == 0
       space = ' '
       space
     elsif @status == 1

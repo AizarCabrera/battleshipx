@@ -1,5 +1,6 @@
 require './lib/cell'
 require './lib/space'
+require './lib/game'
 
 class Board
   attr_reader :row_num,
@@ -9,12 +10,12 @@ class Board
               :row_d,
               :cells
   def initialize
-    @cells = Space.new.populate_cells
+    @guess = Space.new.populate_cells
     @row_num = { 1 => ['0'], 2 => ['1'], 3 => ['2'], 4 => ['3'], 5 => ['4'] }
-    @row_a = { 1 => ['A'], 2 => [@cells['A1'].display], 3 => [@cells['A2'].display], 4 => [@cells['A3'].display], 5 => [@cells['A4'].display] }
-    @row_b = { 1 => ['B'], 2 => [@cells['B1'].display], 3 => [@cells['B2'].display], 4 => [@cells['B3'].display], 5 => [@cells['B4'].display] }
-    @row_c = { 1 => ['C'], 2 => [@cells['C1'].display], 3 => [@cells['C2'].display], 4 => [@cells['C3'].display], 5 => [@cells['C4'].display] }
-    @row_d = { 1 => ['D'], 2 => [@cells['D1'].display], 3 => [@cells['D2'].display], 4 => [@cells['D3'].display], 5 => [@cells['D4'].display] }
+    @row_a = { 1 => ['A'], 2 => [@guess['A1'].display], 3 => [@guess['A2'].display], 4 => [@guess['A3'].display], 5 => [@guess['A4'].display] }
+    @row_b = { 1 => ['B'], 2 => [@guess['B1'].display], 3 => [@guess['B2'].display], 4 => [@guess['B3'].display], 5 => [@guess['B4'].display] }
+    @row_c = { 1 => ['C'], 2 => [@guess['C1'].display], 3 => [@guess['C2'].display], 4 => [@guess['C3'].display], 5 => [@guess['C4'].display] }
+    @row_d = { 1 => ['D'], 2 => [@guess['D1'].display], 3 => [@guess['D2'].display], 4 => [@guess['D3'].display], 5 => [@guess['D4'].display] }
   end
 
   def display_board
@@ -25,6 +26,3 @@ class Board
     p row_d.values
   end
 end
-
-board = Board.new
-p board.display_board

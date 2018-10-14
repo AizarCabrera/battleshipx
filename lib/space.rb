@@ -24,15 +24,18 @@ class Space
 
   # def place_usr_ship(place)
 
-  def place_user_ships(guess)
+  def place_user_ships(guess) # split this into sub and destroyer later
     if guess.chars[0] == guess.chars[3] && guess.chars[1].to_i + 2 == guess.chars[4].to_i
       guess = guess.split << (guess[0] + (guess.chars[1].to_i + 1).to_s) # if guess is "A1 A3" add "A2" into the array representing a ship
     elsif guess.chars[0].next.next == guess.chars[3] && guess.chars[1] == guess.chars[4]
-      guess = guess.split << guess.chars[0].next + guess.chars[1]
+      guess = guess.split << guess.chars[0].next + guess.chars[1] # if guess is "A1 C1" adds B1
     elsif guess.chars[0].next == guess.chars[3] && guess.chars[1] == guess.chars[4]
-      guess = guess.split
+      guess = guess.split # if guess is "A1 A2" returns an array of coordinates
     elsif guess.chars[0] == guess.chars[3] && guess.chars[1].to_i + 1 == guess.chars[4].to_i
-      guess = guess.split
+      guess = guess.split # if guess is "A1 B1" returns an array of coordinates
+    else
+      p "sorry, that doesn't work - try again"
+      # either use recursion or board to re-ask for coordinates
     end
 
     guess.each do |guess|
@@ -62,8 +65,6 @@ class Space
         place_user_ships(input.upcase.to_s)
       end
     end
-
-    @valid_guesses
   end
 
   def store_value
@@ -71,6 +72,6 @@ class Space
   end
 end
 
-# p space = Space.new.populate_cells
-# space.place_user_ships
-# p space.valid_guesses[:A1]
+# space = Space.new
+# space.place_user_ships('A1 C1')
+# p space.store_value

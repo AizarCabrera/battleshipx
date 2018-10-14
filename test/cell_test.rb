@@ -12,11 +12,11 @@ class CellTest < Minitest::Test
   end
 
   def test_it_can_take_horizontal_coordinates
-    assert_equal 1, @cell.coord_x
+    assert_equal 1, @cell.x
   end
 
   def test_it_can_take_vertical_coordinates
-    assert_equal 1, @cell.coord_y
+    assert_equal 1, @cell.y
   end
 
   def test_it_does_not_have_ship_by_default
